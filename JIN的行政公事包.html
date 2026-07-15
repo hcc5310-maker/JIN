@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIN的行政公事包</title>
+    <!-- 引入 Tailwind CSS 確保排版與美觀 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 引入 Google 字體 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: linear-gradient(135deg, #f5efe6 0%, #e8dcd0 100%);
+            min-height: 100vh;
+        }
+
+        /* 玻璃擬態質感效果 */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(139, 115, 85, 0.1);
+            background: rgba(255, 255, 255, 0.85);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-6 text-stone-800">
+
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-6">
+        
+        <!-- ================= 左側導覽列 ================= -->
+        <aside class="w-full md:w-64 glass-panel rounded-2xl p-5 flex flex-col shrink-0 h-fit">
+            <!-- 標題區 -->
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-stone-300/40">
+                <div class="w-10 h-10 rounded-full bg-amber-700/10 flex items-center justify-center text-xl">
+                    💼
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg text-amber-900">JIN的行政公事包</h1>
+                    <p class="text-xs text-stone-500">教育行政 AI 助手</p>
+                </div>
+            </div>
+
+            <!-- 分類導覽選單 -->
+            <nav class="space-y-1">
+                <a href="#section-recom" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-stone-700 bg-amber-800/10 text-amber-900 transition">
+                    ⭐ 推薦必備
+                </a>
+                <a href="#section-doc" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-stone-600 hover:bg-stone-200/50 hover:text-stone-900 transition">
+                    📝 公文與行政撰寫
+                </a>
+                <a href="#section-class" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-stone-600 hover:bg-stone-200/50 hover:text-stone-900 transition">
+                    🏫 班級與親師溝通
+                </a>
+                <a href="#section-curri" class="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-stone-600 hover:bg-stone-200/50 hover:text-stone-900 transition">
+                    📚 課程與教學設計
+                </a>
+            </nav>
+
+            <!-- 底部標記 -->
+            <div class="mt-8 pt-4 border-t border-stone-300/40 text-center text-xs text-stone-500">
+                <p>© JIN 教育 AI 工作坊</p>
+            </div>
+        </aside>
+
+        <!-- ================= 右側主內容區 ================= -->
+        <main class="flex-1 space-y-8">
+            
+            <!-- 搜尋與頁首 -->
+            <div class="glass-panel rounded-2xl p-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div class="text-stone-600 text-sm font-medium">歡迎使用行政公事包！請選擇下方 AI 工具開始工作。</div>
+                <div class="w-full sm:w-auto">
+                    <input type="text" placeholder="搜尋行政工具..." class="w-full sm:w-64 px-4 py-2 rounded-xl text-sm border border-stone-300/60 bg-white/50 focus:outline-none focus:ring-2 focus:ring-amber-700/30">
+                </div>
+            </div>
+
+            <!-- 分類 1：推薦必備 -->
+            <section id="section-recom" class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">⭐</span>
+                    <h2 class="text-lg font-bold text-stone-800">推薦必備</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- 工具卡片 1 -->
+                    <div class="glass-card rounded-2xl p-5 flex flex-col justify-between min-h-[160px]">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-bold text-stone-800 flex items-center gap-2">
+                                    <span class="text-amber-700">✍️</span> 學校公文擬搞 AI
+                                </h3>
+                            </div>
+                            <p class="text-stone-500 text-xs mt-2 leading-relaxed">
+                                輸入公文來文重點或核心要求，快速產生結構完整的公文簽呈或回覆草稿。
+                            </p>
+                        </div>
+                        <!-- 按鈕區：請將 href 替換成您的 Poe 或 Gemini 連結 -->
+                        <div class="flex gap-2 mt-4">
+                            <a href="https://poe.com" target="_blank" class="px-4 py-1.5 bg-amber-800/10 text-amber-900 text-xs font-medium rounded-lg hover:bg-amber-800/20 transition">
+                                Poe 常用版
+                            </a>
+                            <a href="https://gemini.google.com" target="_blank" class="px-4 py-1.5 bg-stone-200/60 text-stone-700 text-xs font-medium rounded-lg hover:bg-stone-300/80 transition">
+                                Gemini 工具
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 工具卡片 2 -->
+                    <div class="glass-card rounded-2xl p-5 flex flex-col justify-between min-h-[160px]">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-bold text-stone-800 flex items-center gap-2">
+                                    <span class="text-amber-700">💬</span> 親師溝通潤飾助手
+                                </h3>
+                            </div>
+                            <p class="text-stone-500 text-xs mt-2 leading-relaxed">
+                                將直白、具情緒或零碎的溝通語句，轉化為溫和、專業且具建設性的親師回覆文字。
+                            </p>
+                        </div>
+                        <div class="flex gap-2 mt-4">
+                            <a href="https://poe.com" target="_blank" class="px-4 py-1.5 bg-amber-800/10 text-amber-900 text-xs font-medium rounded-lg hover:bg-amber-800/20 transition">
+                                Poe 啟用
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 分類 2：公文與行政撰寫 -->
+            <section id="section-doc" class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">📝</span>
+                    <h2 class="text-lg font-bold text-stone-800">公文與行政撰寫</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- 工具卡片 3 -->
+                    <div class="glass-card rounded-2xl p-5 flex flex-col justify-between min-h-[160px]">
+                        <div>
+                            <h3 class="font-bold text-stone-800 flex items-center gap-2">
+                                <span class="text-amber-700">📊</span> 期末行政評語生成器
+                            </h3>
+                            <p class="text-stone-500 text-xs mt-2 leading-relaxed">
+                                根據學生日常表現關鍵字，快速產生適性、溫暖且符合教育現場規範的學期評語。
+                            </p>
+                        </div>
+                        <div class="flex gap-2 mt-4">
+                            <a href="#" class="px-4 py-1.5 bg-stone-200/60 text-stone-700 text-xs font-medium rounded-lg hover:bg-stone-300/80 transition">
+                                尚未設定連結
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 工具卡片 4 -->
+                    <div class="glass-card rounded-2xl p-5 flex flex-col justify-between min-h-[160px]">
+                        <div>
+                            <h3 class="font-bold text-stone-800 flex items-center gap-2">
+                                <span class="text-amber-700">🎨</span> 校園活動文案助手
+                            </h3>
+                            <p class="text-stone-500 text-xs mt-2 leading-relaxed">
+                                輸入活動主題（如：親職教育、校慶），自動生成適合家長群組、海報與邀請函的宣傳文案。
+                            </p>
+                        </div>
+                        <div class="flex gap-2 mt-4">
+                            <a href="#" class="px-4 py-1.5 bg-stone-200/60 text-stone-700 text-xs font-medium rounded-lg hover:bg-stone-300/80 transition">
+                                尚未設定連結
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
